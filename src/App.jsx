@@ -4,15 +4,15 @@ import ProductPage from "./components/pagination/productPage";
 import DigitalClock from "./components/digitalClock";
 import CountdownTimer from "./components/countDownTimer";
 import TimerTest from "./components/countDownTimer/timerTest";
+import ProgressTest from "./components/progressBar/progressTest";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold  text-orange-800">Product List</h1>
-
       {/* <ProductPage /> */}
       {/* <DigitalClock /> */}
-      <TimerTest />
+      {/* <TimerTest /> */}
+      <ProgressTest />
     </>
   );
 }
