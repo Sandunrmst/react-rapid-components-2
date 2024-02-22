@@ -6,6 +6,7 @@ import CountdownTimer from "./components/countDownTimer";
 import TimerTest from "./components/countDownTimer/timerTest";
 import ProgressTest from "./components/progressBar/progressTest";
 import RandomQuoteGenerator from "./components/randomQuoteGen";
+import TooltipTest from "./components/tooltips/test";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <DigitalClock /> */}
       {/* <TimerTest /> */}
       {/* <ProgressTest /> */}
-      <RandomQuoteGenerator />
+      {/* <RandomQuoteGenerator /> */}
+      <TooltipTest />
     </>
   );
 }
