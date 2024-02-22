@@ -7,6 +7,7 @@ import TimerTest from "./components/countDownTimer/timerTest";
 import ProgressTest from "./components/progressBar/progressTest";
 import RandomQuoteGenerator from "./components/randomQuoteGen";
 import TooltipTest from "./components/tooltips/test";
+import CurrencyConverter from "./components/currencyconverter";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <TimerTest /> */}
       {/* <ProgressTest /> */}
       {/* <RandomQuoteGenerator /> */}
-      <TooltipTest />
+      {/* <TooltipTest />  */}
+      <CurrencyConverter />
     </>
   );
 }
