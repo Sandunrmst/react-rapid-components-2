@@ -8,6 +8,7 @@ import ProgressTest from "./components/progressBar/progressTest";
 import RandomQuoteGenerator from "./components/randomQuoteGen";
 import TooltipTest from "./components/tooltips/test";
 import CurrencyConverter from "./components/currencyconverter";
+import FilterProducts from "./components/filterProducts";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <ProgressTest /> */}
       {/* <RandomQuoteGenerator /> */}
       {/* <TooltipTest />  */}
-      <CurrencyConverter />
+      {/* <CurrencyConverter /> */}
+      <FilterProducts />
     </>
   );
 }
