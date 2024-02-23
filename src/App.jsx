@@ -10,6 +10,7 @@ import TooltipTest from "./components/tooltips/test";
 import CurrencyConverter from "./components/currencyconverter";
 import FilterProducts from "./components/filterProducts";
 import TipCalculator from "./components/TipCalculator";
+import MusicPlayer from "./components/musicPlayer";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/* <TooltipTest />  */}
       {/* <CurrencyConverter /> */}
       {/* <FilterProducts /> */}
-      <TipCalculator />
+      {/* <TipCalculator /> */}
+      <MusicPlayer />
     </>
   );
 }

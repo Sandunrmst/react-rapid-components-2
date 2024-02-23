@@ -37,7 +37,7 @@ const TipCalculator = () => {
     <div>
       <h1 className="text-2xl font-semibold mb-3">Tip Calculator</h1>
       <div className="mb-2">
-        <label>Bill Amount:</label>
+        <label className="text-left">Bill Amount:</label>
         <input
           onChange={(event) => setBillAmount(event.target.value)}
           value={billAmount}
@@ -46,7 +46,7 @@ const TipCalculator = () => {
         />
       </div>
       <div className="mb-2">
-        <label>Tip Percentage:</label>
+        <label className="text-left">Tip Percentage:</label>
         <input
           onChange={(event) => setTipPercentage(event.target.value)}
           value={tipPercentage}
@@ -55,7 +55,7 @@ const TipCalculator = () => {
         />
       </div>
       <div className="mb-2">
-        <label>Number of People:</label>
+        <label className="text-left">Number of People:</label>
         <input
           onChange={(event) => setSplitCount(event.target.value)}
           value={splitCount}
