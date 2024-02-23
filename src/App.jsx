@@ -9,6 +9,7 @@ import RandomQuoteGenerator from "./components/randomQuoteGen";
 import TooltipTest from "./components/tooltips/test";
 import CurrencyConverter from "./components/currencyconverter";
 import FilterProducts from "./components/filterProducts";
+import TipCalculator from "./components/TipCalculator";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <RandomQuoteGenerator /> */}
       {/* <TooltipTest />  */}
       {/* <CurrencyConverter /> */}
-      <FilterProducts />
+      {/* <FilterProducts /> */}
+      <TipCalculator />
     </>
   );
 }

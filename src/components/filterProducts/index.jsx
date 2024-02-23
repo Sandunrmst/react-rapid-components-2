@@ -62,7 +62,11 @@ const FilterProducts = () => {
       {uniquCategories.map((item) => (
         <button
           onClick={() => setCurrentSelectedCategory(item)}
-          className="bg-green-600 mr-2 mb-5 px-4 py-2 rounded-lg text-lg"
+          className={`${
+            currentSelectedCategory === item
+              ? "bg-green-800 mr-2 mb-5 px-4 py-2 rounded-lg text-lg  text-slate-200"
+              : "bg-green-600 mr-2 mb-5 px-4 py-2 rounded-lg text-lg"
+          }`}
           key={item}
         >
           {item}
