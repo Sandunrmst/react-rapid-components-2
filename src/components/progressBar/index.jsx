@@ -1,56 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 
-const StepProgressBar = ({ steps, activeStep, setActiveStep }) => {
-  function handlePreviousStep() {
-    setActiveStep((prevSetp) => Math.max(prevSetp - 1, 0));
-  }
+function ProgressBar() {
+  const [progressPercent, setProgressPercent] = useState(0);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  function handleNextStep() {
-    setActiveStep((prevSetp) => Math.min(prevSetp + 1, steps.length - 1));
-  }
-
-  function calculateCurrentStepWidth() {
-    return `${(100 / (steps.length - 1)) * activeStep}%`;
+  function handleProgressPercentage(event) {
+    setProgressPercent(event.target.value);
+    if (event.target.value > 100) {
+      setErrorMsg("Please enter a value less than 100");
+    } else {
+      setErrorMsg("");
+    }
   }
 
   return (
-    <div>
-      <div className="flex justify-between w-[80%] items-center m-auto bg-slate-300 rounded-[8px] p-10">
-        {steps && steps.length > 0
-          ? steps.map((stepItem, index) => (
-              <div
-                className={`${
-                  index <= activeStep ? "bg-[#4caf50] text-slate-50" : ""
-                } 'flex flex-grow h-[100%] items-center justify-center font-semibold bg-[#2196f3] p-5' `}
-                style={{ width: calculateCurrentStepWidth() }}
-                key={index}
-              >
-                {stepItem}
-              </div>
-            ))
-          : null}{" "}
-      </div>
-
-      <div>
-        <div className="flex justify-center items-center gap-10 my-0 mx-20 mt-4">
-          <button
-            className="bg-orange-500 p-5 rounded-md font-semibold"
-            disabled={activeStep === 0}
-            onClick={handlePreviousStep}
-          >
-            Previous Step
-          </button>
-          <button
-            className="bg-orange-500 p-5 rounded-md font-semibold"
-            disabled={activeStep === steps.length - 1}
-            onClick={handleNextStep}
-          >
-            Next Step
-          </button>
+    <div className="flex flex-col gap-10 items-center mt-[30px]">
+      <h1>Custom Progress Bar</h1>
+      <div className="progress-bar">
+        <div className="w-[200px] h-[30px] rounded-[40px] bg-[#cdcdcd] text-yellow-400 relative z-1">
+          {progressPercent >= 0 && progressPercent <= 100 ? (
+            <div
+              style={{ width: `${progressPercent}%` }}
+              className="h-[30px] grid rounded-[20px] m-auto bg-blue-500 text-blue-300 absolute z-10 transition-all duration-1500 ease-in-out delay-300"
+            >
+              {progressPercent}
+            </div>
+          ) : (
+            <p>{errorMsg}</p>
+          )}
         </div>
+      </div>
+      <div className="input-container">
+        <label>Input Percentage :</label>
+        <input
+          onChange={handleProgressPercentage}
+          type="number"
+          value={progressPercent}
+        />
       </div>
     </div>
   );
-};
+}
 
-export default StepProgressBar;
+export default ProgressBar;
