@@ -15,6 +15,7 @@ import ProgressBar from "./components/progressBar";
 import BMICalculator from "./components/bmi";
 import ButtonRippleEffect from "./components/button-ripple-effect";
 import DragAndDrop from "./components/drag-and-drop";
+import FormValidation from "./components/formValidation";
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       {/* <ProgressBar /> */}
       {/* <BMICalculator /> */}
       {/* <ButtonRippleEffect /> */}
-      <DragAndDrop />
+      {/* <DragAndDrop /> */}
+      <FormValidation />
     </>
   );
 }
