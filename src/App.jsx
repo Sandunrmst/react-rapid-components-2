@@ -16,6 +16,7 @@ import BMICalculator from "./components/bmi";
 import ButtonRippleEffect from "./components/button-ripple-effect";
 import DragAndDrop from "./components/drag-and-drop";
 import FormValidation from "./components/formValidation";
+import FileUpload from "./components/file-upload";
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <BMICalculator /> */}
       {/* <ButtonRippleEffect /> */}
       {/* <DragAndDrop /> */}
-      <FormValidation />
+      {/* <FormValidation /> */}
+      <FileUpload />
     </>
   );
 }
