@@ -17,6 +17,7 @@ import ButtonRippleEffect from "./components/button-ripple-effect";
 import DragAndDrop from "./components/drag-and-drop";
 import FormValidation from "./components/formValidation";
 import FileUpload from "./components/file-upload";
+import Quiz from "./components/quiz-app";
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
       {/* <ButtonRippleEffect /> */}
       {/* <DragAndDrop /> */}
       {/* <FormValidation /> */}
-      <FileUpload />
+      {/* <FileUpload /> */}
+      <Quiz />
     </>
   );
 }
